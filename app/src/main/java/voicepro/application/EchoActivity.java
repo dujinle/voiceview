@@ -203,12 +203,12 @@ public class EchoActivity extends AppCompatActivity {
         for(int i = 0;i < d2.size();i++){
             dd2[i] = d2.get(i);
         }
-        long intst1 = VprocessJNI.init_real(d1.size(),8000,256,80);
+        long intst1 = reader1.getInst();
+        long intst2 = reader2.getInst();
         VprocessJNI.pfeat_real(intst1,dd1);
-        long intst2 = VprocessJNI.init_real(d2.size(),8000,256,80);
-        VprocessJNI.pfeat_real(intst1,dd2);
+        VprocessJNI.pfeat_real(intst2,dd2);
         double[] ret = VprocessJNI.compare_real(intst1,intst2);
-        similarity.setText("置信度:mfcc" + ret[0] + "\tmass:" + ret[1] + "\trms:" + ret[2]);
+        similarity.setText("置信度:mfcc:" + ret[0] + "\tmass:" + ret[1] + "\trms:" + ret[2]);
     }
     //开始录音
     private void startAudio(){

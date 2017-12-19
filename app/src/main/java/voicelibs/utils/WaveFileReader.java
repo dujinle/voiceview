@@ -31,7 +31,9 @@ public class WaveFileReader {
         VprocessJNI.close_file(inst);
         Log.i("main","start WaveFileReader data size:" + dataArray.size() + "succes");
     }
-
+    public long getInst(){
+        return this.inst;
+    }
     public ArrayList<Double> getData(){
         return this.dataArray;
     }
