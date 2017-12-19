@@ -1,0 +1,3 @@
+set solib-search-path /home/ubuntu/voice_process/obj/local/armeabi
+source /usr/local/bin/android-ndk-r10c/prebuilt/common/gdb/common.setup
+directory /usr/local/bin/android-ndk-r10c/platforms/android-17/arch-arm/usr/include /usr/local/bin/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++ /home/ubuntu/voice_process/jni/../include/
