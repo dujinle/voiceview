@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -58,7 +59,6 @@ public class MainListActivity extends Activity {
         });
         sqm = new SQliteManager(MainListActivity.this,"voice_db",null,1);
         initListView();
-
     }
 
     public class DownloadTask extends AsyncTask<String, String,Integer> {
@@ -124,6 +124,17 @@ public class MainListActivity extends Activity {
         mData = getData();
         MyAdapter adapter = new MyAdapter(this);
         list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+                Intent intent = new Intent();
+                intent.setClass(MainListActivity.this, ItemListActivity.class);
+                String title  = (String)mData.get(position).get("title");
+                String dnum = (String)mData.get(position).get("info");
+                intent.putExtra("title", title);
+                intent.putExtra("dnum", dnum);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

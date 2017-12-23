@@ -21,6 +21,7 @@ import java.nio.ShortBuffer;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
+import android.util.Log;
 
 public class SamplePlayer {
     public interface OnCompletionListener {
@@ -37,8 +38,11 @@ public class SamplePlayer {
     private Thread mPlayThread;
     private boolean mKeepPlaying;
     private OnCompletionListener mListener;
+    public SamplePlayer(){
 
-    public SamplePlayer(ShortBuffer samples, int sampleRate, int channels, int numSamples) {
+    }
+
+    public void setDataSource(ShortBuffer samples, int sampleRate, int channels, int numSamples) {
         mSamples = samples;
         mSampleRate = sampleRate;
         mChannels = channels;
@@ -62,27 +66,9 @@ public class SamplePlayer {
                 mBuffer.length * 2,
                 AudioTrack.MODE_STREAM);
         // Check when player played all the given data and notify user if mListener is set.
-        mAudioTrack.setNotificationMarkerPosition(mNumSamples - 1);  // Set the marker to the end.
-        mAudioTrack.setPlaybackPositionUpdateListener(
-                new AudioTrack.OnPlaybackPositionUpdateListener() {
-            @Override
-            public void onPeriodicNotification(AudioTrack track) {}
 
-            @Override
-            public void onMarkerReached(AudioTrack track) {
-                stop();
-                if (mListener != null) {
-                    mListener.onCompletion();
-                }
-            }
-        });
         mPlayThread = null;
         mKeepPlaying = true;
-        mListener = null;
-    }
-
-    public SamplePlayer(SoundFile mSoundFile) {
-        this(mSoundFile.getSamples(), mSoundFile.getSampleRate(), mSoundFile.getChannels(), mSoundFile.getNumSamples());
     }
 
     public void setOnCompletionListener(OnCompletionListener listener) {
@@ -104,6 +90,21 @@ public class SamplePlayer {
         mKeepPlaying = true;
         mAudioTrack.flush();
         mAudioTrack.play();
+        mAudioTrack.setNotificationMarkerPosition(mNumSamples - 1);  // Set the marker to the end.
+        mAudioTrack.setPlaybackPositionUpdateListener(
+                new AudioTrack.OnPlaybackPositionUpdateListener() {
+                    @Override
+                    public void onPeriodicNotification(AudioTrack track) {}
+
+                    @Override
+                    public void onMarkerReached(AudioTrack track) {
+                        Log.i("main","onMarkerReached");
+                        stop();
+                        if (mListener != null) {
+                            mListener.onCompletion();
+                        }
+                    }
+                });
         // Setting thread feeding the audio samples to the audio hardware.
         // (Assumes mChannels = 1 or 2).
         mPlayThread = new Thread () {
@@ -121,7 +122,6 @@ public class SamplePlayer {
                         }
                         mSamples.get(mBuffer, 0, numSamplesLeft);
                     }
-                    // TODO(nfaralli): use the write method that takes a ByteBuffer as argument.
                     mAudioTrack.write(mBuffer, 0, mBuffer.length);
                 }
             }
@@ -173,10 +173,11 @@ public class SamplePlayer {
     public int getCurrentPosition() {
     	int curPos = 0;
     	try{
-    	curPos = (int)((mPlaybackStart + mAudioTrack.getPlaybackHeadPosition()) *
-                (1000.0 / mSampleRate));
-    	}catch(Exception e){
-//    	mAudioTrack.setNotificationMarkerPosition(mNumSamples - 1); 
+//    	curPos = (int)((mPlaybackStart + mAudioTrack.getPlaybackHeadPosition()) *
+//                (1000.0 / mSampleRate));
+            curPos = (int)(mPlaybackStart + mAudioTrack.getPlaybackHeadPosition());
+        }catch(Exception e){
+
     	}
         return curPos;
     }

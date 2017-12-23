@@ -8,10 +8,14 @@ import android.os.Environment;
 import android.util.Log;
 
 public class U {
-
+	public static final int PLAYFINISH = 3;
+	public static final int PLAYING = 1;
+	public static final int LOADED = 2;
 	public static final String DATA_DIRECTORY = Environment
 			.getExternalStorageDirectory() + "/record";
 
+	public static final String CONF_DIRECTORY = Environment
+			.getExternalStorageDirectory() + "/record/init.conf";
 	public static final String RECORD_DIRECTORY = Environment
 			.getExternalStorageDirectory() + "/record/recordtmp.wav";
 	/**
