@@ -2,184 +2,175 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton-butterknife-8.2.1_3035c2aea89f690f95d148615a595ddfe3b56bd8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\libs\musicg-1.4.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e4cc5194d9313717e173c63eb38dd220a63b5532">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\2\musicg-1.4.2.0_cc73b1f7e881f6b15557ab3dd3f16a9cba7f42b3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\yingy\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_99773e2588e9a1888868ab252961b607b14b24a8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_84102ca0c15e40197e2f842251baeb9ddde0ce9b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_7b29948059ea5bd674c1ed7487b678cfa9b93a2e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e066c7adbab1a3b41b544ba8f6c664138eefb80b">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5b240dbfa0dc0cd469ab6714314b8274c87ec734\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_cc8a68d0cfcbacceb391cb44504c2e318b65e263\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_846346cfbe5b891e695fdcdb1a4b5e043ffb88d3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_aef6a59b815f9165c6b8953b8803f4a232b348b7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="bed28f3f1a3fcbb04d199f2a573cd26577f211c0">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d20d0704d704612bcfce73121edb59d986036f6c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.2.0_1106fa66eb7feab1e1b5e0dd6ed45222c9755e4c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_46df5c668dff1c82c89b9b13efbb090fa2babbcd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.2.0_21d2ece0a4cc99be40b254610a12fceb23335d7e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\yingy\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-annotations-8.2.1_dfed9bc15353f5ac9b92abcf8c3cc55208b2b818\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.1"
         sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_558afe2ddeadae1ff6e03d879fc44e6f7be7a8cf\classes.dex" />
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_b56a0a9a9f936b6196a8636077cc51b6498eeb1e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_cdc9292d1ecb42e138a7252010720f291117f79a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.1"
         sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_53343be1bc0f233aef2b592cf419783c2fde2c1d\classes.dex" />
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.2.0_d8db12f0ef583b0a7cc8004c4e54e5093d9f2ef7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.2.0_53adb0e3f56feb7e9b8e8850cb799c43ad2518df\classes.dex" />
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.2.0_a336eb57b9bb09edc31e31d9f4008bd8f9471970.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\svndata\Application\app\build\intermediates\exploded-aar\com.github.hotchemi\permissionsdispatcher\2.1.3\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.1"
-        sha1="8f012268b56e56239148960f2697b4ef138b670f">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.hotchemi-permissionsdispatcher-2.1.3_2201ae8e9aee4e2343d587e8b2dfee88f3c47d06\classes.dex" />
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.2.0_af803555b3327cfe044ff31605a43f14f4f3a7c5.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\android-sdk-windows\android-sdk-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.2.0_f3ca36901163c18241c980b64bc393ae2f85034d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.2.0_66762084768799b822001303b3d7617e6e322668.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.2.0_607ff19e193fdc0a0efc4cf642bfb514dbf4a90a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.jakewharton-butterknife-8.2.1_d159cd45193400396c793e5d20a3ed71a87b1140.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android-sdk-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.1"
         sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="F:\svndata\Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_4c95b13de6d0da7a268d238170bb3fff25a8fede\classes.dex" />
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_92c8c20f31d516c2b81ed583960c759f1d882d57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_b8f5aaffcb1076a015fd5ec7eb4b161009388cb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\libs\musicg-1.4.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e4cc5194d9313717e173c63eb38dd220a63b5532">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\musicg-1.4.2.0_0d0dd052e293018375b60b14947cb33fdea7b665.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_f6355d4c10d753f533c7aaac991fff28ce34258e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.2.0_d77bb5dba7b6e1c00e18d5f894c901311e447490.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.2.1_6530ed4492c039feb8759382d5b87e8d74717dad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.2.0_9c3d64fc604b6ad709b2eafccbf09d5043e1b761.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.github.hotchemi\permissionsdispatcher\2.1.3\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8f012268b56e56239148960f2697b4ef138b670f">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.github.hotchemi-permissionsdispatcher-2.1.3_e4dd6d8978184ff6064731b3be648d42b250331e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.2.0_af3fa639298e966fa4cb9ff8bcffc25714a1fc2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitdata\voiceview\app\build\intermediates\exploded-aar\voiceview\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1e8fdac6504e65c923354e28f752fb2671a511c2">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\voiceview-library-unspecified_11b0d3bff616383c0a2d6f58c7faa5f09e09429e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="E:\gitdata\voiceview\app\build\intermediates\pre-dexed\debug\glide-3.7.0_1f3ddf859a86296da03fddcf50d19f29d652df81.jar" />
     </item>
 
 </items>

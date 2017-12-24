@@ -39,7 +39,7 @@ public class WaveFileReader {
             }
         }
         VprocessJNI.close_file(inst);
-        Log.i("main","start WaveFileReader data size:" + dataArray.size() + "succes");
+        Log.i("main","start WaveFileReader getData size:" + dataArray.size() + "succes");
         return dataArray;
     }
 
@@ -54,7 +54,7 @@ public class WaveFileReader {
             }
         }
         VprocessJNI.close_file(inst);
-        Log.i("main","start WaveFileReader data size:" + rdata.length + "succes");
+        Log.i("main","start WaveFileReader getShortData size:" + rdata.length + "succes");
         return ShortBuffer.wrap(rdata);
     }
     public long getInst(){

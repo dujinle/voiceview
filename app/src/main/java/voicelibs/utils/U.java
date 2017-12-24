@@ -8,6 +8,9 @@ import android.os.Environment;
 import android.util.Log;
 
 public class U {
+    public static final int PREPARE_RECORD = 5;
+	public static final int RECORDED = 4;
+	public static final int READED = 6;
 	public static final int PLAYFINISH = 3;
 	public static final int PLAYING = 1;
 	public static final int LOADED = 2;

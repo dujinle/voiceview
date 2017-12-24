@@ -79,12 +79,12 @@ public class WaveView extends View {
 	public void setCurPos(int curPos){
         this.curPos = curPos;
     }
+
     public void setStatus(int status){
 		this.status = status;
 	}
 	public void setData(ArrayList<Double> data){
 		this.data = data;
-		this.invalidate();
 	}
 	public void setLine_offset(int line_offset){
 		this.line_offset = line_offset;
@@ -105,7 +105,12 @@ public class WaveView extends View {
 
 		int baseLine = measuredHeight / 2;
 		rateY = (65535 / 2 / (measuredHeight - line_offset));
-
+		Log.i("main","go into ondraw status:" + status);
+        /*准备开始录音则清空画布的内容*/
+		if(status == U.PREPARE_RECORD){
+			pBitMap = null;
+			data = null;
+		}
 		if(pBitMap == null) {
 			pBitMap = Bitmap.createBitmap(measuredWidth, measuredHeight, Bitmap.Config.ARGB_4444);
 			Canvas formCanvas = new Canvas(pBitMap);
@@ -114,9 +119,8 @@ public class WaveView extends View {
 			formCanvas.drawLine(0, low, measuredWidth, low, paintLine);//最下面的那根线
 			canvas.drawBitmap(pBitMap, 0, 0, paintLine);
 		}
-		if(data != null && status != U.PLAYING){
+		if(status == U.RECORDED && data != null){
 			Canvas formCanvas = new Canvas(pBitMap);
-			status = U.LOADED;
 			divider = width / data.size();
 			end = (int)(divider * data.size());
 			for (int i = 0; i < data.size(); i++) {

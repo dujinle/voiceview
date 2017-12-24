@@ -7,12 +7,14 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.media.AudioRecord;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.util.Log;
 import android.view.SurfaceView;
 
 import jni.VprocessJNI;
+import voicelibs.utils.U;
 import voicelibs.utils.WaveFileReader;
 import voicepro.application.EchoActivity;
 
@@ -34,6 +36,7 @@ public class WaveCanvas {
 	private String mFileName;
 	private int readsize;
 	private EchoActivity waveView;
+    private Handler callBack;
 
 	public WaveCanvas(EchoActivity main){
 		this.waveView = main;
@@ -45,22 +48,23 @@ public class WaveCanvas {
      * @param recBufSize
      * @param audioName
      */
-    public void Start(AudioRecord audioRecord, WaveFileReader wfreader, int recBufSize, String audioName, Callback callback) {
+    public void Start(AudioRecord audioRecord, WaveFileReader wfreader, int recBufSize, String audioName, Handler callback) {
     	this.audioRecord = audioRecord;
         isRecording = true;
         isWriting = true;
 		this.wfreader = wfreader;
         this.recBufSize = recBufSize;
 		this.mFileName = audioName;
+        this.callBack = callback;
         new Thread(new WriteRunnable()).start();//开线程写文件
-        new RecordTask(audioRecord, recBufSize,callback).execute();
+        new RecordTask(audioRecord, recBufSize).execute();
     }
 
     /** 
      * 停止录音
      */  
     public void Stop() {
-		Log.e("test","stop start");
+		Log.i("main","stop start");
         isRecording = false;
 		audioRecord.stop();
         //inBuf.clear();// 清除
@@ -83,16 +87,10 @@ public class WaveCanvas {
     class RecordTask extends AsyncTask<Object, Object, Object> {
     	private int recBufSize;  
         private AudioRecord audioRecord;
-        private SurfaceView sfv;// 画板  
-        private Paint mPaint;// 画笔  
-        private Callback callback;
-        private boolean isStart =false;
-        
 
-        public RecordTask(AudioRecord audioRecord, int recBufSize,Callback callback) {
+        public RecordTask(AudioRecord audioRecord, int recBufSize) {
             this.audioRecord = audioRecord;
             this.recBufSize = recBufSize;
-            this.callback = callback;
             inBuf.clear();// 清除  
         }
     	
@@ -105,7 +103,7 @@ public class WaveCanvas {
                 while (isRecording) {
                     // 从MIC保存数据到缓冲区  
                     readsize = audioRecord.read(buffer, 0, recBufSize);
-					//Log.i("main","read wav data size:" + readsize);
+					Log.i("main","record wav data size:" + readsize);
                     synchronized (inBuf) {
 	                    for (int i = 0; i < readsize; i ++) {
 	                    	inBuf.add(buffer[i]);
@@ -116,10 +114,7 @@ public class WaveCanvas {
 				Log.i("main","read wav total data size:" + total_size);
     			isWriting = false;
             } catch (Throwable t) {
-            	Message msg = new Message();
-            	msg.arg1 =-2;
-            	msg.obj=t.getMessage();
-            	callback.handleMessage(msg); 
+                t.printStackTrace();
             }
 			return null;
 		}
@@ -149,7 +144,7 @@ public class WaveCanvas {
 			while (isWriting || inBuf.size() > 0) {
 				synchronized (inBuf) {
 					if(inBuf.size() > 0) {
-						//Log.i("main", "write wav data size:" + inBuf.size());
+						Log.i("main", "start write wav data size:" + inBuf.size());
 						short a[] = new short[inBuf.size()];
 						for (int i = 0; i < inBuf.size(); i++) {
 							a[i] = inBuf.get(i);
@@ -160,9 +155,12 @@ public class WaveCanvas {
 					}
 				}
 			}
-			Log.i("main","record wav data total size:" + total_size);
-			VprocessJNI.close_file(inst);
-			waveView.initWaveView();
+
+            Log.i("main","record wav data total size:" + total_size);
+            VprocessJNI.close_file(inst);
+            Message newMsg = new Message();
+            newMsg.what = U.RECORDED;
+            callBack.sendMessage(newMsg);
 		}
     }
 }

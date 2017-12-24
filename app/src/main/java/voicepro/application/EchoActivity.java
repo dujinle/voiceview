@@ -104,13 +104,20 @@ public class EchoActivity extends AppCompatActivity {
             public void run() {
                 try {
                     //异步加载波形
+                    wavDraw.setStatus(U.RECORDED);
                     reader1.setWavReader(fileName);
                     baseData = reader1.getData();
                     wavDraw.setData(baseData);
-                    if(mediaPlayer.isPlaying()){
-                        mediaPlayer.stop();
+
+                    Message newMsg = new Message();
+                    newMsg.what = U.READED;
+                    newMsg.obj = wavDraw;
+                    if(fileName == U.RECORD_DIRECTORY){
+                        newMsg.arg1 = R.id.replay;
+                    }else {
+                        newMsg.arg1 = R.id.play;
                     }
-                    play.setEnabled(true);
+                    SyncHandler.sendMessage(newMsg);
                 } catch (final Exception e) {
                     e.printStackTrace();
                     return;
@@ -119,7 +126,25 @@ public class EchoActivity extends AppCompatActivity {
         };
         mLoadSoundFileThread.start();
     }
-
+    Handler SyncHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case U.RECORDED:
+                    waveRiew.setStatus(U.RECORDED);
+                    loadWavForm(U.RECORD_DIRECTORY,waveRiew);
+                    break;
+                case U.READED:
+                    WaveView wavDraw =  (WaveView)(msg.obj);
+                    wavDraw.invalidate();
+                    if(msg.arg1 == R.id.play){
+                        play.setEnabled(true);
+                    }else if(msg.arg1 == R.id.replay){
+                        replay.setEnabled(true);
+                    }
+                    break;
+            }
+        };
+    };
     public Button getReplay(){
         return replay;
     }
@@ -227,7 +252,6 @@ public class EchoActivity extends AppCompatActivity {
                     initAudio();
                     startAudio();
                 } else {
-                    replay.setEnabled(true);
                     record.setText("录音");
                     waveCanvas.Stop();
                     waveCanvas = null;
@@ -267,17 +291,11 @@ public class EchoActivity extends AppCompatActivity {
     }
     //开始录音
     private void startAudio(){
+        waveRiew.setStatus(U.PREPARE_RECORD);
+        waveRiew.invalidate();
         waveCanvas = new WaveCanvas(this);
-        waveCanvas.Start(audioRecord,reader1, recBufSize, U.RECORD_DIRECTORY, new Handler.Callback() {
-            @Override
-            public boolean handleMessage(Message msg) {
-                return true;
-            }
-        });
-    }
+        waveCanvas.Start(audioRecord,reader1, recBufSize, U.RECORD_DIRECTORY,SyncHandler);
 
-    public void  initWaveView(){
-        loadWavForm(U.RECORD_DIRECTORY,waveRiew);
     }
 
     @OnShowRationale({Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE})
